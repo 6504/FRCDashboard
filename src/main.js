@@ -89,7 +89,8 @@ function createWindow() {
         height: 818,
         // It's best if the dashboard takes up as much space as possible without covering the DriverStation application.
         // The window is closed until the python server is ready
-        show: false
+        show: false,
+		icon: __dirname + '/../images/icon.png'
     });
     // Move window to top (left) of screen.
     mainWindow.setPosition(0, 224);
@@ -116,7 +117,7 @@ function createWindow() {
     mainWindow.on('unresponsive', () => {
         console.log('Main Window is unresponsive');
     });
-    window.webContents.on('did-fail-load', () => {
+    mainWindow.webContents.on('did-fail-load', () => {
         console.log('window failed load');
     });
 }
