@@ -24,7 +24,11 @@
     "electron-packager": "^10.1.1"
   },
   "dependencies": {
+<<<<<<< HEAD
     "svg-gauge": "^1.0.4",
     "wpilib-nt-client": "^1.7.0"
+=======
+    "wpilib-nt-client": "^1.7.1"
+>>>>>>> a557764cdff9305caae594b8f91a44fa56b0dae5
   }
 }
