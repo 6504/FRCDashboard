@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <title>FRC Dashboard</title>
     <link href="css/style.css" rel="stylesheet">
+    <!-- Gauge CSS -->
+    <link href="css/gauges.css" rel="stylesheet">
     <!-- Theme selection link -->
     <link id="theme-link" rel="stylesheet" href>
 </head>
@@ -20,6 +22,8 @@
     <!-- You'll need to mess around with the CSS of #camera (found in css/style.css) to get it to work.
         More explanation in that CSS rule. -->
     <div id="camera"></div>
+    <!-- Total Power gauge -->
+    <div id="total-power" class="gauge-container"></div>
     <!-- The main body of the dashboard, by default contains the gyro monitor and the robot diagram -->
     <article>
         <!-- Gyroscope -->
@@ -81,6 +85,7 @@
     <script src="networktables/networktables.js"></script>
     <script src="connection.js"></script>
     <script src="ui.js"></script>
+    <script src="gauges.js"></script>
     <!-- Add-on components --->
     <script src="components/themes.js"></script>
     <script src="components/multicamera.js"></script>

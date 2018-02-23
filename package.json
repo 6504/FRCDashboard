@@ -26,6 +26,5 @@
   "dependencies": {
     "svg-gauge": "^1.0.4",
     "wpilib-nt-client": "^1.7.0"
-    "wpilib-nt-client": "^1.7.1"
   }
 }
