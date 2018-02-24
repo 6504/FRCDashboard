@@ -19,7 +19,7 @@ let ui = {
     },
     autoSelect: document.getElementById('auto-select'),
     armPosition: document.getElementById('arm-position')
-    });
+    };
 };
 
 // Key Listeners
