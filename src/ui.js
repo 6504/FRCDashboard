@@ -13,14 +13,14 @@ let ui = {
     robotDiagram: {
         arm: document.getElementById('robot-arm')
     },
-    example: {
-        button: document.getElementById('example-button'),
-        readout: document.getElementById('example-readout').firstChild
+    liftLimit: {
+        button: document.getElementById('liftLimit-button'),
+        readout: document.getElementById('liftLimit-readout').firstChild
     },
     autoSelect: document.getElementById('auto-select'),
     armPosition: document.getElementById('arm-position')
-    };
 };
+
 
 // Key Listeners
 
@@ -53,10 +53,16 @@ NetworkTables.addKeyListener('/SmartDashboard/arm/encoder', (key, value) => {
 });
 
 // This button is just an example of triggering an event on the robot by clicking a button.
-NetworkTables.addKeyListener('/SmartDashboard/example_variable', (key, value) => {
+NetworkTables.addKeyListener('/SmartDashboard/Lift limit reached', (key, value) => {
     // Set class active if value is true and unset it if it is false
-    ui.example.button.classList.toggle('active', value);
-    ui.example.readout.data = 'Value is ' + value;
+    ui.liftLimit.button.classList.toggle('active', value);
+    ui.liftLimit.readout.data = 'Value is ' + value;
+    if(value == true) {
+        ui.liftLimit.readout.data = 'Lift limit has been reached';
+    }
+    else {
+        ui.liftLimit.readout.data = 'Lift limit has not been reached';
+    }
 });
 
 NetworkTables.addKeyListener('/robot/time', (key, value) => {
