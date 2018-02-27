@@ -2,7 +2,7 @@ var Gauge = require("svg-gauge"); //Importing the gauge package
 
 var cpuGauge = Gauge(document.getElementById("total-power"), {
     min: 0,
-    max: 40,
+    max: 120,
     //Renders Amps label
     label: function(value) {
       return Math.round(value) + "A";
@@ -10,18 +10,15 @@ var cpuGauge = Gauge(document.getElementById("total-power"), {
     value: 0,
     // Custom dial colors (Optional)
     color: function(value) {
-      if(value < 20) {
-        return "#5ee432"; // green
-      }else if(value < 40) {
-        return "#fffa50"; // yellow
-      }else if(value < 60) {
-        return "#f7aa38"; // orange
-      }else {
-        return "#ef4655"; // red
+      if(value <= 120) {
+        return "green";
       }
     }
 });
 
+NetworkTables.addKeyListener('/SmartDashboard/Total power', (key, value) => {
+   cpuGauge.setValue(value);
+});
 // Set gauge value
 //cpuGauge.setValue(20);
 
