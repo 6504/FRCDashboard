@@ -39,16 +39,28 @@
             <rect id="gyro-arm" x="80" y="5" width="10" height="80"></rect>
             <text id="gyro-number" x="90" y="115">0º</text>
         </svg>
-        <!-- Example robot diagram, arm moves when encoder value changes -->
+        <!-- Example robot diagram, arm pneumatics move -->
         <svg id="robot-diagram" width="332" height="450">
             <text x="40" y="340">Example SVG Robot Diagram</text>
-            <rect x="75" y="360" width="230" height="40"></rect>
-            <rect x="85" y="370" width="210" height="40"></rect>
-            <rect id="robot-arm" x="5" y="375" width="80" height="10"></rect>
-            <circle cx="100" cy="410" r="25"></circle>
-            <circle cx="260" cy="410" r="25"></circle>
-            <rect x="60" y="380" width="250" height="30"></rect>
-            <text id="team" x="185" y="405" text-anchor="middle">####</text>
+            <rect x="10" y="70" width="10" height="280"></rect><!-- Left Outside -->
+            <rect x="43" y="70" width="10" height="280"></rect><!-- Left Inside -->
+            <rect x="200" y="70" width="10" height="280"></rect><!-- Right Outside -->
+            <rect x="167" y="70" width="10" height="280"></rect><!-- Right Inside -->
+            <rect x="10" y="315" width="200" height="35"></rect><!-- Back Frame -->
+            <text id="team" x="110" y="343" text-anchor="middle">6504</text><!-- Label -->
+            <rect x="10" y="70" width="70" height="35"></rect><!-- Front Left Frame -->
+            <rect x="140" y="70" width="70" height="35"></rect><!-- Front Right Frame -->
+            <rect x="43" y="170" width="134" height="10"></rect><!-- 1st Lift Stage -->
+            <rect x="43" y="160" width="134" height="10"></rect><!-- 2nd Lift Stage -->
+            <rect x="43" y="150" width="134" height="10"></rect><!-- Carriage -->
+            <rect id="robot-piston1" x="53" y="145" width="104" height="5"></rect><!-- Piston 1 -->
+            <rect id="robot-piston1arm" x="48" y="80" height="70" width="5"></rect><!-- Arm connected to Piston 1 -->
+            <rect id="robot-piston2" x="63" y="140" width="104" height="5"></rect><!-- Piston 2 -->
+            <rect id="robot-piston2arm" x="167" y="80" height="65" width="5"></rect><!-- Arm connected to Piston 2 -->
+            <rect x="20" y="110" rx="5" ry="5" width="23" height="50"></rect><!-- Front Left Wheel -->
+            <rect x="20" y="260" rx="5" ry="5" width="23" height="50"></rect><!-- Back Left Wheel -->
+            <rect x="177" y="110" rx="5" ry="5" width="23" height="50"></rect><!-- Front Right Wheel -->
+            <rect x="177" y="260" rx="5" ry="5" width="23" height="50"></rect><!-- Back Right Wheel -->
         </svg>
     </article>
     <!-- The sidebar of the dashboard. Designed for smaller control elements like selection boxes and small buttons. -->
@@ -57,7 +69,7 @@
             The <p> below then says the value. -->
         <!-- Lift limit section -->
         <div id="example-section">
-            <button id="liftLimit-button">Change example value</button>
+            <!--<button id="liftLimit-button">Change example value</button>-->
             <p id="liftLimit-readout">Value is undefined</p>
         </div>
         <!-- Autonomous selector -->

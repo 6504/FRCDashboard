@@ -11,10 +11,13 @@ let ui = {
         number: document.getElementById('gyro-number')
     },
     robotDiagram: {
-        arm: document.getElementById('robot-arm')
+        piston1: document.getElementById('robot-piston1'),
+        piston1arm: document.getElementById('robot-piston1arm'),
+        piston2: document.getElementById('robot-piston2'),
+        piston2arm: document.getElementById('robot-piston2arm')
     },
     liftLimit: {
-        button: document.getElementById('liftLimit-button'),
+        //button: document.getElementById('liftLimit-button'),
         readout: document.getElementById('liftLimit-readout').firstChild
     },
     autoSelect: document.getElementById('auto-select'),
@@ -37,26 +40,32 @@ let updateGyro = (key, value) => {
 };
 NetworkTables.addKeyListener('/SmartDashboard/Gyro angle', updateGyro);
 
-// The following case is an example, for a robot with an arm at the front.
-NetworkTables.addKeyListener('/SmartDashboard/arm/encoder', (key, value) => {
-    // 0 is all the way back, 1200 is 45 degrees forward. We don't want it going past that.
-    if (value > 1140) {
-        value = 1140;
+//Pneumatic Intake in
+NetworkTables.addKeyListener('/SmartDashboard/Pneumatic Intake In/running', (key, value) => {
+    //Pull arms in if the command is running
+    if(value == true) {
+      ui.robotDiagram.piston1.style.transform = `translate(5px)`;
+      ui.robotDiagram.piston1arm.style.transform = `translate(10px)`;
+      ui.robotDiagram.piston2.style.transform = `translate(-5px)`;
+      ui.robotDiagram.piston2arm.style.transform = `translate(-10px)`;
     }
-    else if (value < 0) {
-        value = 0;
+});
+//Pneumatic Intake out
+NetworkTables.addKeyListener('/SmartDashboard/Pneumatic Intake Out/running', (key, value) => {
+    //Push arms out if the command is running
+    if(value == true) {
+      ui.robotDiagram.piston1.style.transform = `translate(-1px)`;
+      ui.robotDiagram.piston1arm.style.transform = `translate(-1px)`;
+      ui.robotDiagram.piston2.style.transform = `translate(1px)`;
+      ui.robotDiagram.piston2arm.style.transform = `translate(1px)`;
     }
-    // Calculate visual rotation of arm
-    var armAngle = value * 3 / 20 - 45;
-    // Rotate the arm in diagram to match real arm
-    ui.robotDiagram.arm.style.transform = `rotate(${armAngle}deg)`;
 });
 
-// This button is just an example of triggering an event on the robot by clicking a button.
+//Lift Limit + button(inactive)
 NetworkTables.addKeyListener('/SmartDashboard/Lift limit reached', (key, value) => {
     // Set class active if value is true and unset it if it is false
-    ui.liftLimit.button.classList.toggle('active', value);
-    ui.liftLimit.readout.data = 'Value is ' + value;
+    //ui.liftLimit.button.classList.toggle('active', value);
+    //ui.liftLimit.readout.data = 'Value is ' + value;
     if(value == true) {
         ui.liftLimit.readout.data = 'Lift limit has been reached';
     }
@@ -93,10 +102,11 @@ NetworkTables.addKeyListener('/SmartDashboard/Auto mode/options', (key, value) =
 });
 
 // The rest of the doc is listeners for UI elements being clicked on
-ui.liftLimit.button.onclick = function() {
+/*ui.liftLimit.button.onclick = function() {
     // Set NetworkTables values to the opposite of whether button has active class.
     NetworkTables.putValue('/SmartDashboard/example_variable', this.className != 'active');
-};
+};*/
+
 // Reset gyro value to 0 on click
 ui.gyro.container.onclick = function() {
     // Store previous gyro val, will now be subtracted from val for callibration
