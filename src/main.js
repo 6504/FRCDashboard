@@ -5,7 +5,7 @@ const electron = require('electron');
 const wpilib_NT = require('wpilib-nt-client');
 const client = new wpilib_NT.Client();
 
-// The client will try to reconnect after 1 second - UNCOMMENT THIS LINE LATER 
+// The client will try to reconnect after 1 second - UNCOMMENT THIS LINE LATER
 //client.setReconnectDelay(1000)
 
 /** Module to control application life. */

@@ -93,7 +93,7 @@ NetworkTables.addKeyListener('/SmartDashboard/Auto mode/options', (key, value) =
 });
 
 // The rest of the doc is listeners for UI elements being clicked on
-ui.example.button.onclick = function() {
+ui.liftLimit.button.onclick = function() {
     // Set NetworkTables values to the opposite of whether button has active class.
     NetworkTables.putValue('/SmartDashboard/example_variable', this.className != 'active');
 };
@@ -102,7 +102,7 @@ ui.gyro.container.onclick = function() {
     // Store previous gyro val, will now be subtracted from val for callibration
     ui.gyro.offset = ui.gyro.val;
     // Trigger the gyro to recalculate value.
-    updateGyro('/SmartDashboard/drive/navx/yaw', ui.gyro.val);
+    updateGyro('/SmartDashboard/Gyro angle', ui.gyro.val);
 };
 // Update NetworkTables when autonomous selector is changed
 ui.autoSelect.onchange = function() {

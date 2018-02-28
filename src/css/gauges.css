@@ -1,7 +1,12 @@
-#total-power {
+#battery-voltage {
   top: 54vh;
   background-color:#333;
-  padding-top: 20px;
+  padding-top: 10px;
+  text-align: center;
+}
+#battery-voltage p {
+  font: 18px sans-serif;
+  color: white;
 }
 .gauge-container {
   width: 150px;
@@ -10,7 +15,7 @@
   padding: 10px;
 }
 .gauge-container > .gauge > .dial {
-  stroke: #eee;
+  stroke: #222;
   stroke-width: 3;
   fill: rgba(0,0,0,0);
 }
@@ -20,8 +25,40 @@
   fill: rgba(0,0,0,0);
 }
 .gauge-container > .gauge > .value-text {
-  fill: rgb(47, 227, 255);
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 1em;
+  fill: white;
+  font-family: Arial;
+  font-size: 20px;
+}
+
+#total-power {
+  top: 54vh;
+  left: 12vw;
+  background-color:#333;
+  padding-top: 10px;
+  text-align: center;
+}
+#total-power p {
+  font: 18px sans-serif;
+  color: white;
+}
+.gauge-container.two {
+  width: 150px;
+  height: 150px;
+  display: block;
+  padding: 10px;
+}
+.gauge-container.two > .gauge > .dial {
+  stroke: #222;
+  stroke-width: 3;
+  fill: rgba(0,0,0,0);
+}
+.gauge-container.two > .gauge > .value {
+  stroke: rgb(47, 227, 255);
+  stroke-width: 3;
+  fill: rgba(0,0,0,0);
+}
+.gauge-container.two > .gauge > .value-text {
+  fill: white;
+  font-family: Arial;
+  font-size: 20px;
 }
