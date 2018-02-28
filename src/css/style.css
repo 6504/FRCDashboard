@@ -1,3 +1,9 @@
+@media (max-width: 1356px) {
+  * {
+     transform: scale(.)
+  }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -34,7 +40,7 @@ select {
     background: none;
     color: white;
     height: 25px;
-    background-color: #333;
+    background-color: #444;
 }
 input[type="text"], input[type="number"] {
     cursor: text;
@@ -96,8 +102,8 @@ header p {
 article {
     top: 0;
     left: 50vw;
-    height: 100vh;
-    width: 35vw;
+    height: 97.2vh;
+    width: 33.4vw;
     background-color: #333;
 }
 svg * {
@@ -109,7 +115,7 @@ svg * {
     transform-origin: center;
 }
 text {
-    font-size: 16px;
+    font: 18px sans-serif;
     letter-spacing: 2px;
     stroke: none;
     fill: white;
@@ -130,9 +136,10 @@ text {
     text-anchor: middle;
 }
 #robot-diagram {
-    position: absolute;
-    bottom: 1px;
-    right: 1vw;
+  position: absolute;
+  top: 44.5vh;
+  left: 25vw;
+  background-color:#333;
 }
 #robot-arm {
     -webkit-transform-origin: right;
@@ -147,8 +154,8 @@ aside {
     right: 0;
     top: 0;
     width: 15vw;
-    height: 100vh;
-    background-color:coral;
+    height: 97.2vh;
+    background-color: #333;
 }
 aside > * {
     margin-bottom: 20px;
