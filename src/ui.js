@@ -16,6 +16,13 @@ let ui = {
         piston2: document.getElementById('robot-piston2'),
         piston2arm: document.getElementById('robot-piston2arm')
     },
+    pneumatics: {
+      status: document.getElementById('pneumatics-status').firstChild,
+      piston1: document.getElementById('pneumatics-piston1'),
+      piston1arm: document.getElementById('pneumatics-piston1arm'),
+      piston2: document.getElementById('pneumatics-piston2'),
+      piston2arm: document.getElementById('pneumatics-piston2arm')
+    },
     liftLimit: {
         //button: document.getElementById('liftLimit-button'),
         readout: document.getElementById('liftLimit-readout').firstChild
@@ -48,6 +55,12 @@ NetworkTables.addKeyListener('/SmartDashboard/Pneumatic Intake In/running', (key
       ui.robotDiagram.piston1arm.style.transform = `translate(10px)`;
       ui.robotDiagram.piston2.style.transform = `translate(-5px)`;
       ui.robotDiagram.piston2arm.style.transform = `translate(-10px)`;
+
+      ui.pneumatics.piston1.style.transform = `translate(20px)`;
+      ui.pneumatics.piston1arm.style.transform = `translate(30px)`;
+      ui.pneumatics.piston2.style.transform = `translate(-30px)`;
+      ui.pneumatics.piston2arm.style.transform = `translate(-40px)`;
+      ui.pneumatics.status.data = 'Closed';
     }
 });
 //Pneumatic Intake out
@@ -58,6 +71,12 @@ NetworkTables.addKeyListener('/SmartDashboard/Pneumatic Intake Out/running', (ke
       ui.robotDiagram.piston1arm.style.transform = `translate(-1px)`;
       ui.robotDiagram.piston2.style.transform = `translate(1px)`;
       ui.robotDiagram.piston2arm.style.transform = `translate(1px)`;
+
+      ui.pneumatics.piston1.style.transform = `translate(-5px)`;
+      ui.pneumatics.piston1arm.style.transform = `translate(-5px)`;
+      ui.pneumatics.piston2.style.transform = `translate(.5px)`;
+      ui.pneumatics.piston2arm.style.transform = `translate(.5px)`;
+      ui.pneumatics.status.data = 'Open';
     }
 });
 

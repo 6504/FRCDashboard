@@ -59,6 +59,12 @@
     <div id="back-left-power" class="gauge-container four">
       <p>Back Left Wheel:</p>
     </div>
+    <div id="front-right-power" class="gauge-container five">
+      <p>Front Right Wheel:</p>
+    </div>
+    <div id="back-right-power" class="gauge-container six">
+      <p>Back Right Wheel:</p>
+    </div>
     <!-- The main body of the dashboard, by default contains the gyro monitor and the robot diagram -->
     <article>
         <!-- Gyroscope -->
@@ -67,6 +73,17 @@
             <circle cx="85" cy="85" r="50"></circle>
             <rect id="gyro-arm" x="80" y="5" width="10" height="80"></rect>
             <text id="gyro-number" x="90" y="115">0º</text>
+        </svg>
+        <!-- Pneumatics Close-Up -->
+        <svg id="pneumatics" width="300" height="300">
+          <text x="55" y="100">Pneumatics System:</text>
+          <text id="pneumatics-status" x="125" y="200">Open</text>
+          <rect height="20" width="210" y="268" x="45"></rect><!-- Carriage -->
+          <rect x="45" y="288" width="210" height="20"></rect><!-- Lift Stage 2 -->
+          <rect id="pneumatics-piston1" x="35" y="258" width="180" height="10"></rect><!-- Piston 1 -->
+          <rect id="pneumatics-piston1arm" x="25" y="148" height="120" width="10"></rect><!-- Arm connected to Piston 1 -->
+          <rect id="pneumatics-piston2" x="95" y="248" width="180" height="10"></rect><!-- Piston 2 -->
+          <rect id="pneumatics-piston2arm" x="275" y="148" height="110" width="10"></rect><!-- Arm connected to Piston 2 -->
         </svg>
     </article>
     <!-- The sidebar of the dashboard. Designed for smaller control elements like selection boxes and small buttons. -->

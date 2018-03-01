@@ -1,6 +1,18 @@
 @media (max-width: 1356px) {
-  * {
-     transform: scale(.)
+  #camera {
+     transform: scale(.86, .87);
+     transform-origin: left bottom;
+  }
+  #robot-diagram {
+    transform: scale(.835);
+    transform-origin: bottom;
+  }
+  article {
+    transform: scale(.98, 1);
+    transform-origin: left;
+  }
+  header {
+    transform: scale(.99, 1);
   }
 }
 
@@ -138,13 +150,13 @@ text {
 #robot-diagram {
   position: absolute;
   top: 44.5vh;
-  left: 25vw;
+  left: 27vw;
   background-color:#333;
 }
-#robot-arm {
-    -webkit-transform-origin: right;
-    -ms-transform-origin: right;
-    transform-origin: right;
+#pneumatics {
+  position: absolute;
+  top: 50.5vh;
+  right: 12vw;
 }
 #team {
     font-size: 28px;

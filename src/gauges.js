@@ -83,6 +83,48 @@ var backLeftGauge = Gauge(document.getElementById("back-left-power"), {
 NetworkTables.addKeyListener('/SmartDashboard/Back left wheel', (key, value) => {
   backLeftGauge.setValueAnimated(value);
 });
+
+var frontRightGauge = Gauge(document.getElementById("front-right-power"), {
+     min: 0,
+     max: 40,
+     dialStartAngle: 180,
+     dialEndAngle: 0,
+     //Renders Amps label
+     label: function(value) {
+       return Math.round(10 * value)/10 + "A";
+     },
+     value: 0,
+     //Green Dial color
+     color: function(value) {
+       if(value <= 40) {
+         return "green";
+       }
+     }
+});
+NetworkTables.addKeyListener('/SmartDashboard/Front right wheel', (key, value) => {
+  frontLeftGauge.setValueAnimated(value);
+});
+
+var backRightGauge = Gauge(document.getElementById("back-right-power"), {
+     min: 0,
+     max: 40,
+     dialStartAngle: 180,
+     dialEndAngle: 0,
+     //Renders Amps label
+     label: function(value) {
+       return Math.round(10 * value)/10 + "A";
+     },
+     value: 0,
+     //Green Dial color
+     color: function(value) {
+       if(value <= 40) {
+         return "green";
+       }
+     }
+});
+NetworkTables.addKeyListener('/SmartDashboard/Back right wheel', (key, value) => {
+  backLeftGauge.setValueAnimated(value);
+});
 // Set gauge value
 //cpuGauge.setValue(20);
 
