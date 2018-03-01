@@ -65,6 +65,15 @@
     <div id="back-right-power" class="gauge-container six">
       <p>Back Right Wheel:</p>
     </div>
+    <div id="lift-power" class="gauge-container seven">
+      <p>Lift Motor:</p>
+    </div>
+    <div id="climber1-power" class="gauge-container eight">
+      <p>Climber 1 Power:</p>
+    </div>
+    <div id="climber2-power" class="gauge-container nine">
+      <p>Climber 2 Power:</p>
+    </div>
     <!-- The main body of the dashboard, by default contains the gyro monitor and the robot diagram -->
     <article>
         <!-- Gyroscope -->
@@ -85,6 +94,9 @@
           <rect id="pneumatics-piston2" x="95" y="248" width="180" height="10"></rect><!-- Piston 2 -->
           <rect id="pneumatics-piston2arm" x="275" y="148" height="110" width="10"></rect><!-- Arm connected to Piston 2 -->
         </svg>
+        <div id="pneumatics-power" class="gauge-container ten">
+          <p>Compressor Power:</p>
+        </div>
     </article>
     <!-- The sidebar of the dashboard. Designed for smaller control elements like selection boxes and small buttons. -->
     <aside>
@@ -95,6 +107,7 @@
             <!--<button id="liftLimit-button">Change example value</button>-->
             <p id="liftLimit-readout">Value is undefined</p>
         </div>
+        <p id="pressure-readout">Value is undefined</p>
         <!-- Autonomous selector -->
         <div class="select-container">
             <select id="auto-select">
@@ -102,10 +115,10 @@
                 <!-- This gets populated by JS -->
             </select>
         </div>
-        <div>
+        <!--<div>
             <p>Adjust arm height</p>
             <input id="arm-position" type="range" min="0" max="1200" value="770">
-        </div>
+        </div>-->
         <!-- Theme selection -->
         <p>Theme:</p>
         <div class="select-container">

@@ -27,6 +27,9 @@ let ui = {
         //button: document.getElementById('liftLimit-button'),
         readout: document.getElementById('liftLimit-readout').firstChild
     },
+    airPressure: {
+        readout: document.getElementById('pressure-readout').firstChild
+    },
     autoSelect: document.getElementById('auto-select'),
     armPosition: document.getElementById('arm-position')
 };
@@ -93,6 +96,19 @@ NetworkTables.addKeyListener('/SmartDashboard/Lift limit reached', (key, value) 
     }
 });
 
+//Pneumatics Pressure
+NetworkTables.addKeyListener('/SmartDashboard/Air pressure is fine', (key, value) => {
+    // Set class active if value is true and unset it if it is false
+    //ui.liftLimit.button.classList.toggle('active', value);
+    //ui.liftLimit.readout.data = 'Value is ' + value;
+    if(value == true) {
+        ui.airPressure.readout.data = 'Air pressure is fine';
+    }
+    else {
+        ui.airPressure.readout.data = 'Air pressure is low';
+    }
+});
+
 NetworkTables.addKeyListener('/robot/time', (key, value) => {
     // This is an example of how a dashboard could display the remaining time in a match.
     // We assume here that value is an integer representing the number of seconds left.
@@ -138,9 +154,9 @@ ui.autoSelect.onchange = function() {
     NetworkTables.putValue('/SmartDashboard/Auto mode/selected', this.value);
 };
 // Get value of arm height slider when it's adjusted
-ui.armPosition.oninput = function() {
-    NetworkTables.putValue('/SmartDashboard/arm/encoder', parseInt(this.value));
-};
+/*ui.armPosition.oninput = function() {
+   NetworkTables.putValue('/SmartDashboard/arm/encoder', parseInt(this.value));
+};*/
 
 addEventListener('error',(ev)=>{
     ipc.send('windowError',{mesg:ev.message,file:ev.filename,lineNumber:ev.lineno})

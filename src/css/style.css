@@ -150,17 +150,24 @@ text {
 #robot-diagram {
   position: absolute;
   top: 44.5vh;
-  left: 27vw;
+  left: 27.5vw;
   background-color:#333;
 }
 #pneumatics {
   position: absolute;
-  top: 50.5vh;
-  right: 12vw;
+  top: 10vh;
+  right: 5vw;
 }
 #team {
     font-size: 28px;
     letter-spacing: -1px;
+}
+#liftLimit-readout {
+  text-align: center;
+  color: white;
+}
+#pressure-readout {
+  text-align: center;
 }
 aside {
     right: 0;

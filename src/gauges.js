@@ -102,7 +102,7 @@ var frontRightGauge = Gauge(document.getElementById("front-right-power"), {
      }
 });
 NetworkTables.addKeyListener('/SmartDashboard/Front right wheel', (key, value) => {
-  frontLeftGauge.setValueAnimated(value);
+  frontRightGauge.setValueAnimated(value);
 });
 
 var backRightGauge = Gauge(document.getElementById("back-right-power"), {
@@ -123,7 +123,87 @@ var backRightGauge = Gauge(document.getElementById("back-right-power"), {
      }
 });
 NetworkTables.addKeyListener('/SmartDashboard/Back right wheel', (key, value) => {
-  backLeftGauge.setValueAnimated(value);
+  backRightGauge.setValueAnimated(value);
+});
+
+var LiftGauge = Gauge(document.getElementById("lift-power"), {
+     min: 0,
+     max: 40,
+     dialStartAngle: 180,
+     dialEndAngle: 0,
+     //Renders Amps label
+     label: function(value) {
+       return Math.round(10 * value)/10 + "A";
+     },
+     value: 0,
+     //Green Dial color
+     color: function(value) {
+       if(value <= 40) {
+         return "green";
+       }
+     }
+});
+NetworkTables.addKeyListener('/SmartDashboard/Lift motor', (key, value) => {
+  LiftGauge.setValueAnimated(value);
+});
+
+var climber1Gauge = Gauge(document.getElementById("climber1-power"), {
+     min: 0,
+     max: 40,
+     dialStartAngle: 180,
+     dialEndAngle: 0,
+     //Renders Amps label
+     label: function(value) {
+       return Math.round(10 * value)/10 + "A";
+     },
+     value: 0,
+     //Green Dial color
+     color: function(value) {
+       if(value <= 40) {
+         return "green";
+       }
+     }
+});
+NetworkTables.addKeyListener('/SmartDashboard/Climber Motor 1', (key, value) => {
+  climber1Gauge.setValueAnimated(value);
+});
+
+var climber2Gauge = Gauge(document.getElementById("climber2-power"), {
+     min: 0,
+     max: 40,
+     dialStartAngle: 180,
+     dialEndAngle: 0,
+     //Renders Amps label
+     label: function(value) {
+       return Math.round(10 * value)/10 + "A";
+     },
+     value: 0,
+     //Green Dial color
+     color: function(value) {
+       if(value <= 40) {
+         return "green";
+       }
+     }
+});
+NetworkTables.addKeyListener('/SmartDashboard/Climber Motor 2', (key, value) => {
+  climber2Gauge.setValueAnimated(value);
+});
+
+var CompressorGauge = Gauge(document.getElementById('pneumatics-power'), {
+    min: 0,
+    max: 40,
+    //Renders Voltage label
+    label: function(value) {
+      return Math.round(10 * value)/10 + "A";
+    },
+    value: 0,
+    //Dial colors
+    color: function(value) {
+        return "green";
+    }
+});
+NetworkTables.addKeyListener('/SmartDashboard/Compressor power', (key, value) => {
+   CompressorGauge.setValueAnimated(value);
 });
 // Set gauge value
 //cpuGauge.setValue(20);
