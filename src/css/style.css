@@ -108,9 +108,9 @@ header p {
     background-color: #333;
     /* You'll need to mess with this a bit to get your camera to work. Replace the url with a live-updating image feed from your camera. Using other camera streaming systems will require some tweaking. */
     /*background-image: url('http://raspberrypi-6504.local:1185/?action=stream'); */
-    
+
     /* Trying a new way of getting camera feed */
-    background-image: url('http://roborio-XXXX-frc.local:5800/?action=stream');
+    background-image: url('http://roborio-6504-frc.local:1181/?action=stream');
     background-repeat: no-repeat;
     background-size: cover;
 }
