@@ -1,22 +1,7 @@
-[<img src="images/icon.png" align="right" width="150">](https://github.com/FRCDashboard/FRCDashboard)
 # FRC Dashboard
-FRC Dashboard is a fully customizable dashboard for [FIRST Robotics Competition (FRC)](http://firstinspires.org/robotics/frc) which is based on web languages (JavaScript/CSS/HTML). It's completely legal for competition, and can be used to give your whole drive team significantly richer control of your robot.
+[Robot Code](https://github.com/6504/FRC-2018) | [Vision Code](https://github.com/6504/FRC-2018-Vision) | **Dashboard**
 
-The dashboard's code is designed to be 100% accessible and expandable. To this aim, the code is rigorously commented and [a set of training exercises](https://github.com/FRCDashboard/training) have been prepared to orient new users. In addition, the base system comes with several functioning example widgets and features, and we've build [several helpful addons](https://github.com/FRCDashboard?query=addon-) to speed up the development of your team's dashboard.
-
-**Contributions are VERY welcome! Please feel free to open a pull request or issue!**
-
-![Screenshot slideshow](images/screenshots.gif)
-
-<details>
-    <summary>Click to view some example implementations of FRC Dashboard</summary>
-
-![1132's 2017 Dashboard](https://i.imgur.com/iSiTxjY.jpg)  
-![6325's 2017 Dashboard](https://i.redd.it/w9jt1gmbecpy.png)  
-![1418's 2017 Dashboard](https://raw.githubusercontent.com/frc1418/2017-dashboard/master/images/screenshot.png)  
-![1418's 2016 Dashboard](https://raw.githubusercontent.com/frc1418/FRCDashboard/2016/screenshot.png)  
-
-</details>
+This is the code for Team 6504's 2018 dashboard, heavily based on the [FRC Dashboard](https://github.com/FRCDashboard/FRCDashboard) framework.
 
 ## Setup
 You'll need [`nodejs`](https://nodejs.org) & [`npm`](https://npmjs.com).
@@ -45,12 +30,15 @@ This will open the dashboard application. Note that you can refresh the page and
 
 It is recommended that while using the dashboard on your driver station, you close the top panel of the FRC DriverStation to make room for the dashboard.
 
-## Authors
+## Original Authors
 * [Erik Boesen](https://github.com/ErikBoesen) is the primary developer of FRC Dashboard.
 * [Team 1418](https://github.com/frc1418) used earlier versions of this code in 2015 and 2016.
 * [Leon Tan](https://github.com/lleontan) led the original 1418 UI team, coded `pynetworktables2js`, and developed a browser-based UI which was years later reworked to create FRC Dashboard.
 * [Dustin Spicuzza](https://github.com/virtuald) leads the [RobotPy](https://github.com/robotpy) project, and mentored Team 1418 through much of FRC Dashboard's genesis.
 * [Tomas Rakusan](https://github.com/rakusan2) Developed Node based [NetworkTables client](https://github.com/rakusan2/FRC-NT-Client) and its interface in this project.
+
+## Authors
+* [Chandi Kanhai](https://github.com/Chandi-95) wrote the UI for the 2018 dashboard. 
 
 ## Licensing
 This software is available under the [MIT License](`LICENSE`).
