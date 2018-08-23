@@ -26,7 +26,7 @@
 }
 
 #battery-voltage {
-  top: 54.4vh;
+  top: 53.3vh;
   background-color:#333;
   padding-top: 10px;
   text-align: center;
@@ -58,8 +58,8 @@
 }
 
 #total-power {
-  top: 54.4vh;
-  left: 8.93vw;
+  top: 53.3vh;
+  left: 10.6vw;
   background-color:#333;
   padding-top: 10px;
   text-align: center;
@@ -91,8 +91,8 @@
 }
 
 #front-left-power {
-  top: 21.3vh;
-  left: 17.4vw;
+  top: 21.2vh;
+  left: 21vw;
   background-color:#333;
   padding-top: 10px;
   text-align: center;
@@ -124,8 +124,8 @@
 }
 
 #back-left-power {
-  top: 38.3vh;
-  left: 17.4vw;
+  top: 37.9vh;
+  left: 21vw;
   background-color:#333;
   padding-top: 10px;
   text-align: center;
@@ -157,8 +157,8 @@
 }
 
 #front-right-power {
-  top: 21.3vh;
-  left: 41.5vw;
+  top: 21.2vh;
+  left: 39.6vw;
   background-color:#333;
   padding-top: 10px;
   text-align: center;
@@ -190,8 +190,8 @@
 }
 
 #back-right-power {
-  top: 38.3vh;
-  left: 41.5vw;
+  top: 37.9vh;
+  left: 39.6vw;
   background-color:#333;
   padding-top: 10px;
   text-align: center;
@@ -223,8 +223,8 @@
 }
 
 #lift-power {
-  top: 21.4vh;
-  left: 29.5vw;
+  top: 68.7vh;
+  left: 30.3vw;
   background-color:#333;
   padding-top: 10px;
   text-align: center;
@@ -256,8 +256,8 @@
 }
 
 #climber1-power {
-  top: 57vh;
-  left: 17.4vw;
+  top: 53.3vh;
+  left: 21vw;
   background-color:#333;
   padding-top: 10px;
   text-align: center;
@@ -289,8 +289,8 @@
 }
 
 #climber2-power {
-  top: 57vh;
-  left: 41.5vw;
+  top: 53.3vh;
+  left: 39.6vw;
   background-color:#333;
   padding-top: 10px;
   text-align: center;

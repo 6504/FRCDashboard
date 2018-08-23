@@ -1,21 +1,3 @@
-@media (max-width: 1356px) {
-  #camera {
-     transform: scale(.86, .87);
-     transform-origin: left bottom;
-  }
-  #robot-diagram {
-    transform: scale(.835);
-    transform-origin: bottom;
-  }
-  article {
-    transform: scale(.98, 1);
-    transform-origin: left;
-  }
-  header {
-    transform: scale(.99, 1);
-  }
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -68,6 +50,7 @@ body > * {
     overflow: scroll;
     background: #222;
 }
+
 #timer {
     font-family: monospace;
     display: block;
@@ -75,12 +58,13 @@ body > * {
     width: 20.4vw;
     top: 0;
     left: 0;
-    font-size: 20vh;
-    line-height: 1.09;
+    font-size: 16vh;
+    line-height: 1.3;
     text-align: center;
     color: white;
     background-color:#333;
 }
+
 header {
     font-size: 30px;
     text-align: center;
@@ -100,9 +84,9 @@ header p {
 #camera {
     padding: 0;
     position: fixed;
-    bottom: 44.4vh;
+    bottom: 45.5vh;
     left: 0;
-    width: 320px;
+    width: 313px;
     height: 240px;
     overflow: hidden;
     background-color: #333;
@@ -118,7 +102,7 @@ article {
     top: 0;
     left: 50vw;
     height: 97.2vh;
-    width: 33.4vw;
+    width: 33.1vw;
     background-color: #333;
 }
 svg * {
@@ -159,7 +143,7 @@ text {
 #pneumatics {
   position: absolute;
   top: 10vh;
-  right: 5vw;
+  right: 1vw;
 }
 #team {
     font-size: 28px;
